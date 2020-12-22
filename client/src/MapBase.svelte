@@ -1,0 +1,101 @@
+<script lang="ts">
+	export let selectedPlace: google.maps.LatLngLiteral;
+	let map: google.maps.Map;
+	let zoom: number;
+	let center: google.maps.LatLngLiteral;
+	let container: HTMLElement;
+	let searchInput: HTMLInputElement;
+	const icon = {
+		url: "./assets/marker_star.png",
+	};
+
+	$: if (zoom) {
+		map = new google.maps.Map(container, {
+			zoom,
+			center,
+		});
+		const searchBox = new google.maps.places.SearchBox(searchInput);
+		map.controls[google.maps.ControlPosition.TOP_LEFT].push(searchInput);
+		map.addListener("bounds_changed", () => {
+			searchBox.setBounds(map.getBounds());
+			let markers: google.maps.Marker[] = [];
+			searchBox.addListener("places_changed", () => {
+				const places = searchBox.getPlaces();
+
+				if (places.length == 0) {
+					return;
+				}
+				// Clear out the old markers.
+				// Clear out the old markers.
+				markers.forEach((marker) => {
+					marker.setMap(null);
+				});
+				markers = [];
+
+				// For each place, get the icon, name and location.
+				const bounds = new google.maps.LatLngBounds();
+				places.forEach((place) => {
+					if (!place.geometry) {
+						console.log("Returned place contains no geometry");
+						return;
+					}
+
+					// Create a marker for each place.
+					selectedPlace = place.geometry.location.toJSON();
+					markers.push(
+						new google.maps.Marker({
+							map,
+							icon,
+							title: place.name,
+							position: place.geometry.location,
+						})
+					);
+
+					if (place.geometry.viewport) {
+						// Only geocodes have viewport.
+						bounds.union(place.geometry.viewport);
+					} else {
+						bounds.extend(place.geometry.location);
+					}
+				});
+				map.fitBounds(bounds);
+			});
+
+			map.addListener("click", (mapsMouseEvent) => {
+				// Close the current InfoWindow.
+				markers.forEach((marker) => {
+					marker.setMap(null);
+				});
+				markers = [];
+				selectedPlace = mapsMouseEvent.latLng.toJSON();
+				markers.push(
+					new google.maps.Marker({
+						map,
+						icon,
+						position: mapsMouseEvent.latLng,
+					})
+				);
+			});
+		});
+	}
+
+	if (navigator.geolocation) {
+		console.log("geoloc.");
+		navigator.geolocation.getCurrentPosition((position) => {
+			console.log(`position found: ${JSON.stringify(position)}`);
+			let coords = position.coords;
+			center = { lat: coords.latitude, lng: coords.longitude };
+			zoom = 15;
+		});
+	} else {
+		console.log("no geoloc.");
+		center = { lat: 27.805352, lng: -33.194958 };
+		zoom = 1;
+	}
+</script>
+
+<input
+	bind:this={searchInput}
+	class="rounded px-2 py-1 m-3 border border-gray-300 text-base" />
+
+<div bind:this={container} class="h-72 rounded-md my-2" />
