@@ -2,8 +2,8 @@
 	export let mapReady: boolean;
 	import ConfigScreen from "./ConfigScreen.svelte";
 	import ResultScreen from "./ResultScreen.svelte";
-	import { GOOGLE_API_KEY } from "./config";
 	import { getPath } from "./request";
+	// import type { env } from "process";
 	let selectedPlace: google.maps.LatLngLiteral;
 	// let waypoints: google.maps.DirectionsWaypoint[];
 	let libraries: any[];
@@ -26,7 +26,7 @@
 	<script
 		defer
 		async
-		src={`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&callback=initMap&libraries=places,directions`}>
+		src={`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API_KEY}&callback=initMap&libraries=places,directions`}>
 	</script>
 </svelte:head>
 <header

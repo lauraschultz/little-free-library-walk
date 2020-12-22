@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"types": ["googlemaps"]
+		"types": ["googlemaps", "node"]
 	},
 
 	"extends": "@tsconfig/svelte/tsconfig.json",
