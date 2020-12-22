@@ -31,7 +31,7 @@
 		<MapBase bind:selectedPlace />
 	{/if}
 
-	<div class="flex gap-4 items-center mb-4">
+	<div class="flex gap-4 items-center my-4">
 		<span
 			class="flex-initial border-4 border-fuchsia-700 text-fuchsia-700 font-black text-3xl leading-none px-3.5 py-2 rounded-full">2</span>
 		<h2
@@ -48,7 +48,7 @@
 			type="range"
 			min="0"
 			max="5"
-			step=".5"
+			step=".25"
 			bind:value={miles}
 			class="m-2 flex-1" /></label>
 

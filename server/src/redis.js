@@ -6,10 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.getZipLibraries = exports.setZipLibraries = exports.getDistanceCache = exports.setDistanceCache = exports.getKey = exports.setKey = exports.setKeyExp = exports.initRedis = void 0;
 const redis_1 = __importDefault(require("redis"));
 let redisClient;
-const REDIS_PORT = process.env.REDIS_URL || 6379;
+const REDIS_PORT = process.env.REDISCLOUD_URL || "6379";
 const LFL_API_CACHE = 172800; // 48 hrs
 const initRedis = () => {
-    redisClient = redis_1.default.createClient(+REDIS_PORT);
+    console.log(`connecting redis.... port is ${REDIS_PORT}`);
+    redisClient = redis_1.default.createClient(REDIS_PORT, { no_ready_check: true });
 };
 exports.initRedis = initRedis;
 const setKeyExp = (key, value, exp) => {

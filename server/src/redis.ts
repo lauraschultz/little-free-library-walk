@@ -1,7 +1,7 @@
 import redis from "redis";
 let redisClient: redis.RedisClient;
 
-const REDIS_PORT = process.env.REDIS_URL || 6379;
+const REDIS_PORT = process.env.REDISCLOUD_URL || "6379";
 const LFL_API_CACHE = 172800; // 48 hrs
 
 interface Location {
@@ -10,7 +10,8 @@ interface Location {
 }
 
 export const initRedis = () => {
-	redisClient = redis.createClient(+REDIS_PORT);
+	console.log(`connecting redis.... port is ${REDIS_PORT}`);
+	redisClient = redis.createClient(REDIS_PORT, { no_ready_check: true });
 };
 
 export const setKeyExp = (key: string, value: string, exp: number) => {
