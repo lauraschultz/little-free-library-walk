@@ -45,7 +45,7 @@
 <footer class="flex-initial bg-gray-700 text-gray-50 mt-5">
 	<a
 		class="max-w-2xl mx-2 sm:mx-10 md:mx-auto py-4 block text-sm"
-		href="https://github.com/lauraschultz"
+		href="https://github.com/lauraschultz/little-free-library-walk"
 		target="_blank"
 		rel="noreferer">
 		<svg

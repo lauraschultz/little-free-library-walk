@@ -1078,7 +1078,7 @@ var app = (function () {
     			t19 = text("continue");
     			t20 = space();
     			if (if_block1) if_block1.c();
-    			attr_dev(span0, "class", "flex-initial border-4 border-fuchsia-700 text-fuchsia-700 font-black text-3xl leading-none px-3.5 py-2 rounded-full");
+    			attr_dev(span0, "class", "flex-initial border-4 border-fuchsia-800 text-fuchsia-800 font-black text-3xl leading-none px-3.5 py-2 rounded-full");
     			add_location(span0, file$1, 19, 2, 533);
     			attr_dev(h20, "class", "flex-1 font-bold text-2xl border-b border-gray-300 italic leading-none");
     			add_location(h20, file$1, 21, 2, 677);
@@ -1086,7 +1086,7 @@ var app = (function () {
     			add_location(div0, file$1, 18, 1, 488);
     			attr_dev(p0, "class", "ml-2");
     			add_location(p0, file$1, 26, 1, 816);
-    			attr_dev(span1, "class", "flex-initial border-4 border-fuchsia-700 text-fuchsia-700 font-black text-3xl leading-none px-3.5 py-2 rounded-full");
+    			attr_dev(span1, "class", "flex-initial border-4 border-fuchsia-800 text-fuchsia-800 font-black text-3xl leading-none px-3.5 py-2 rounded-full");
     			add_location(span1, file$1, 33, 2, 997);
     			attr_dev(h21, "class", "flex-1 font-bold text-2xl border-b border-gray-300 italic leading-none");
     			add_location(h21, file$1, 35, 2, 1141);
@@ -2089,15 +2089,15 @@ var app = (function () {
     			attr_dev(path, "stroke-linejoin", "round");
     			attr_dev(path, "stroke-width", "2");
     			attr_dev(path, "d", "M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z");
-    			add_location(path, file$3, 109, 38, 3389);
-    			attr_dev(svg, "class", "w-6 h-6 inline-block mr-2");
+    			add_location(path, file$3, 109, 38, 3413);
+    			attr_dev(svg, "class", "w-6 h-6 inline-block mr-2 hover:text-indigo-800");
     			attr_dev(svg, "fill", "none");
     			attr_dev(svg, "stroke", "currentColor");
     			attr_dev(svg, "viewBox", "0 0 24 24");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			add_location(svg, file$3, 104, 46, 3246);
-    			add_location(button, file$3, 104, 1, 3201);
-    			attr_dev(div1, "class", "max-w-2xl rounded-xl bg-gray-50 border border-gray-400 shadow-2xl mx-2 sm:mx-10 md:mx-auto p-4 md:p-6 py-2");
+    			add_location(svg, file$3, 104, 46, 3248);
+    			add_location(button, file$3, 104, 1, 3203);
+    			attr_dev(div1, "class", "max-w-2xl rounded-xl bg-gray-50 border border-gray-400 shadow-2xl mx-2 sm:mx-10 md:mx-auto px-4 md:px-6 py-2");
     			add_location(div1, file$3, 100, 0, 2993);
     		},
     		l: function claim(nodes) {
@@ -4026,14 +4026,14 @@ var app = (function () {
     			attr_dev(main, "class", "flex-1 -mt-24 space-y-2");
     			add_location(main, file$4, 31, 0, 1237);
     			attr_dev(path, "d", "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z");
-    			add_location(path, file$4, 48, 38, 1776);
+    			add_location(path, file$4, 48, 38, 1801);
     			attr_dev(svg, "class", "w-4 h-4 inline-block mr-1");
     			attr_dev(svg, "fill", "currentColor");
     			attr_dev(svg, "viewBox", "0 0 20 20");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			add_location(svg, file$4, 44, 2, 1650);
+    			add_location(svg, file$4, 44, 2, 1675);
     			attr_dev(a, "class", "max-w-2xl mx-2 sm:mx-10 md:mx-auto py-4 block text-sm");
-    			attr_dev(a, "href", "https://github.com/lauraschultz");
+    			attr_dev(a, "href", "https://github.com/lauraschultz/little-free-library-walk");
     			attr_dev(a, "target", "_blank");
     			attr_dev(a, "rel", "noreferer");
     			add_location(a, file$4, 39, 1, 1503);

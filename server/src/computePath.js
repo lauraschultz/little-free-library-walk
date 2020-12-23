@@ -51,7 +51,7 @@ edges) => {
             );
             if (nodeValue.maxNumberNodes > maxNeighbor.maxNumberNodes ||
                 (nodeValue.maxNumberNodes === maxNeighbor.maxNumberNodes &&
-                    nodeValue.pathLengthInMeters > maxNeighbor.pathLengthInMeters)) {
+                    nodeValue.pathLengthInMeters < maxNeighbor.pathLengthInMeters)) {
                 maxNeighbor = nodeValue;
                 // maxOfNeighbors = nodeValue.maxNumberNodes;
                 // maxNeighborNodePath = nodeValue.path;
