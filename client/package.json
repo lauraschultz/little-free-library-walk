@@ -2,7 +2,7 @@
 	"name": "svelte-app",
 	"version": "1.0.0",
 	"scripts": {
-		"build": "cross-env NODE_ENV=production npm run build:CSS && rollup -c",
+		"build": "node scripts/create-env.js && cross-env NODE_ENV=production npm run build:CSS && rollup -c",
 		"build:CSS": "npx tailwindcss build src/tailwind.css -o public/global.css",
 		"dev": "rollup -c -w",
 		"start": "sirv public",
