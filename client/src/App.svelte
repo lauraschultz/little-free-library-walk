@@ -39,7 +39,7 @@
 	{#if showConfig}
 		<ConfigScreen {pathToMap} bind:selectedPlace {mapReady} />
 	{:else}
-		<ResultScreen {selectedPlace} {libraries} bind:showConfig />
+		<ResultScreen bind:selectedPlace bind:libraries bind:showConfig />
 	{/if}
 </main>
 <footer class="flex-initial bg-gray-700 text-gray-50 mt-5">

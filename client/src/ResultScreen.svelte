@@ -29,6 +29,11 @@
 		"R",
 		"S",
 	];
+	const reset = () => {
+		libraries = undefined;
+		selectedLibrary = 0;
+		showConfig = true;
+	};
 	$: {
 		if (libraries) {
 			waypoints = libraries.map((r) => {
@@ -45,7 +50,7 @@
 <div
 	in:fly={{ x: 300, duration: 200, delay: 200 }}
 	out:fly={{ x: 300, duration: 200 }}
-	class="max-w-2xl rounded-xl bg-gray-50 border border-gray-400 shadow-2xl mx-2 sm:mx-10 md:mx-auto p-4 md:p-6 ">
+	class="max-w-2xl rounded-xl bg-gray-50 border border-gray-400 shadow-xl mx-2 sm:mx-10 md:mx-auto p-4 md:p-6 ">
 	{#if libraries}
 		{#if libraries.length > 0}
 			<ResultsMap
@@ -103,8 +108,8 @@
 <div
 	in:fly={{ x: 300, duration: 200, delay: 200 }}
 	out:fly={{ x: 300, duration: 200 }}
-	class="max-w-2xl rounded-xl bg-gray-50 border border-gray-400 shadow-2xl mx-2 sm:mx-10 md:mx-auto px-4 md:px-6 py-2">
-	<button on:click={() => (showConfig = true)}><svg
+	class="max-w-2xl rounded-xl bg-gray-50 border border-gray-400 shadow-xl mx-2 sm:mx-10 md:mx-auto px-4 md:px-6 py-2">
+	<button on:click={reset}><svg
 			class="w-6 h-6 inline-block mr-2 hover:text-indigo-800"
 			fill="none"
 			stroke="currentColor"

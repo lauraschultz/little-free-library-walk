@@ -16,7 +16,7 @@
 <div
 	out:fly={{ x: -300, duration: 200 }}
 	in:fly={{ x: -300, duration: 200, delay: 200 }}
-	class="max-w-2xl rounded-xl bg-gray-50 border border-gray-400 shadow-2xl mx-2 sm:mx-10 md:mx-auto p-4 md:p-6 ">
+	class="max-w-2xl rounded-xl bg-gray-50 border border-gray-400 shadow-xl mx-2 sm:mx-10 md:mx-auto p-4 md:p-6 ">
 	<div class="flex gap-4 items-center mb-4">
 		<span
 			class="flex-initial border-4 border-fuchsia-800 text-fuchsia-800 font-black text-3xl leading-none px-3.5 py-2 rounded-full">1</span>

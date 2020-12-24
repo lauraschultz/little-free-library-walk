@@ -36,13 +36,14 @@
 	$: {
 		console.log(`selected library: ${JSON.stringify(selectedLibrary)}`);
 		if (selectedLibrary) {
-			map.setCenter({
-				lat: selectedLibrary.Library_Geolocation__c.latitude,
-				lng: selectedLibrary.Library_Geolocation__c.longitude,
-			});
-
 			map.setZoom(14);
-			setTimeout(() => map.setZoom(17), 500);
+			setTimeout(() => {
+				map.setCenter({
+					lat: selectedLibrary.Library_Geolocation__c.latitude,
+					lng: selectedLibrary.Library_Geolocation__c.longitude,
+				});
+				map.setZoom(17);
+			}, 500);
 		}
 	}
 
