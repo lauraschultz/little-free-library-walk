@@ -7,7 +7,7 @@
 	let searchInput: HTMLInputElement;
 	let mapLoaded = false;
 	const icon = {
-		url: "library/assets/marker_star.png",
+		url: "assets/marker_star.png",
 	};
 
 	$: if (zoom) {

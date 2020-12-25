@@ -32,10 +32,7 @@
 <header
 	class="flex-initial pt-4 md:pt-8 pb-28 md:pb-32 bg-gradient-to-r from-indigo-900 to-fuchsia-900 text-gray-50">
 	<nav class="max-w-2xl mx-2 sm:mx-10 md:mx-auto">
-		<img
-			src="library/assets/logo.svg"
-			alt="Little Free Library Walk"
-			class="w-48" />
+		<img src="assets/logo.svg" alt="Little Free Library Walk" class="w-48" />
 	</nav>
 </header>
 <main class="flex-1 -mt-24 space-y-2">

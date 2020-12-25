@@ -10,7 +10,7 @@
 	let container: HTMLElement;
 	let mapLoaded = false;
 	const star_icon = {
-		url: "library/assets/marker_star.png",
+		url: "assets/marker_star.png",
 	};
 	const letters = [
 		"A",
