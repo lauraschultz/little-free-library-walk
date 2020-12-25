@@ -32,7 +32,10 @@
 <header
 	class="flex-initial pt-4 md:pt-8 pb-28 md:pb-32 bg-gradient-to-r from-indigo-900 to-fuchsia-900 text-gray-50">
 	<nav class="max-w-2xl mx-2 sm:mx-10 md:mx-auto">
-		<img src="./assets/logo.svg" alt="Little Free Library Walk" class="w-48" />
+		<img
+			src="library/assets/logo.svg"
+			alt="Little Free Library Walk"
+			class="w-48" />
 	</nav>
 </header>
 <main class="flex-1 -mt-24 space-y-2">
@@ -44,12 +47,12 @@
 </main>
 <footer class="flex-initial bg-gray-700 text-gray-50 mt-5">
 	<a
-		class="max-w-2xl mx-2 sm:mx-10 md:mx-auto py-4 block text-sm"
+		class="max-w-2xl mx-2 sm:mx-10 md:mx-auto py-4 block text-sm group"
 		href="https://github.com/lauraschultz/little-free-library-walk"
 		target="_blank"
 		rel="noreferer">
 		<svg
-			class="w-4 h-4 inline-block mr-1"
+			class="w-4 h-4 inline-block mr-1 group-hover:text-yellow-300"
 			fill="currentColor"
 			viewBox="0 0 20 20"
 			xmlns="http://www.w3.org/2000/svg"><path

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ResultsMap from "./ResultsMap.svelte";
 	import { fly } from "svelte/transition";
+	import Footsteps from "./footsteps.svelte";
 	export let selectedPlace: google.maps.LatLngLiteral;
 	export let showConfig: boolean;
 	export let libraries: any[];
@@ -86,7 +87,7 @@
 				</div>
 			</div>
 		{:else}
-			<p class="font-bold text-lg">
+			<p class="font-bold text-lg text-center">
 				<!-- <svg
 					class="w-6 h-6 inline-block mr-1 "
 					fill="none"
@@ -99,18 +100,21 @@
 						d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg> -->
 				Nothing found for the address you selected.
 			</p><img
-				src="assets/person_with_map.png"
+				src="library/assets/person_with_map.png"
 				class="max-w-md mx-auto my-4 w-full"
 				alt="woman holding a map" />
 		{/if}
-	{:else}calculating your route...{/if}
+	{:else}
+		<p class="font-bold text-lg text-center">Calculating your route...</p>
+		<Footsteps />
+	{/if}
 </div>
 <div
 	in:fly={{ x: 300, duration: 200, delay: 200 }}
 	out:fly={{ x: 300, duration: 200 }}
 	class="max-w-2xl rounded-xl bg-gray-50 border border-gray-400 shadow-xl mx-2 sm:mx-10 md:mx-auto px-4 md:px-6 py-2">
-	<button on:click={reset}><svg
-			class="w-6 h-6 inline-block mr-2 hover:text-indigo-800"
+	<button on:click={reset} class="group"><svg
+			class="w-6 h-6 inline-block mr-2 group-hover:text-indigo-800"
 			fill="none"
 			stroke="currentColor"
 			viewBox="0 0 24 24"

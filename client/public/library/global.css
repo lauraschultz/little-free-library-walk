@@ -691,8 +691,16 @@ body {
   display: table;
 }
 
+.hidden{
+  display: none;
+}
+
 .items-center{
   align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
 }
 
 .flex-1{
@@ -717,10 +725,6 @@ body {
 
 .h-6{
   height: 1.5rem;
-}
-
-.h-72{
-  height: 18rem;
 }
 
 .h-80{
@@ -832,6 +836,10 @@ body {
 
 .max-w-2xl{
   max-width: 42rem;
+}
+
+.max-w-full{
+  max-width: 100%;
 }
 
 .overflow-hidden{
@@ -968,9 +976,14 @@ body {
   color: rgba(153, 27, 27, var(--tw-text-opacity));
 }
 
-.hover\:text-indigo-800:hover{
+.group:hover .group-hover\:text-indigo-800{
   --tw-text-opacity: 1;
   color: rgba(55, 48, 163, var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:text-yellow-300{
+  --tw-text-opacity: 1;
+  color: rgba(253, 224, 71, var(--tw-text-opacity));
 }
 
 .overflow-ellipsis{
@@ -1001,8 +1014,16 @@ body {
   width: 1.5rem;
 }
 
+.w-24{
+  width: 6rem;
+}
+
 .w-48{
   width: 12rem;
+}
+
+.w-64{
+  width: 16rem;
 }
 
 .w-1\/4{
@@ -1085,6 +1106,11 @@ body {
     -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
             animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
+}
+
+.animate-spin{
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
 @media (min-width: 640px){

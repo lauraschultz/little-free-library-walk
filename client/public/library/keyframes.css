@@ -1,0 +1,63 @@
+#foot_1a,
+#foot_1b {
+	animation: 2.5s linear infinite foot_1;
+}
+
+#foot_2a,
+#foot_2b {
+	animation: 2.5s linear infinite foot_2;
+}
+
+#foot_3a,
+#foot_3b {
+	animation: 2.5s linear infinite foot_3;
+}
+
+#foot_4a,
+#foot_4b {
+	animation: 2.5s linear infinite foot_4;
+}
+
+@keyframes foot_1 {
+	0%,
+	20% {
+		fill: #d1d5db;
+	}
+
+	10% {
+		fill: #6b7280;
+	}
+}
+
+@keyframes foot_2 {
+	20%,
+	40% {
+		fill: #d1d5db;
+	}
+
+	30% {
+		fill: #6b7280;
+	}
+}
+
+@keyframes foot_3 {
+	40%,
+	60% {
+		fill: #d1d5db;
+	}
+
+	50% {
+		fill: #6b7280;
+	}
+}
+
+@keyframes foot_4 {
+	60%,
+	80% {
+		fill: #d1d5db;
+	}
+
+	70% {
+		fill: #6b7280;
+	}
+}

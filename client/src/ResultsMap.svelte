@@ -8,11 +8,9 @@
 	let zoom: number;
 	let center: google.maps.LatLngLiteral;
 	let container: HTMLElement;
+	let mapLoaded = false;
 	const star_icon = {
-		url: "./assets/marker_star.png",
-	};
-	const reg_icon = {
-		url: "./assets/marker.png",
+		url: "library/assets/marker_star.png",
 	};
 	const letters = [
 		"A",
@@ -92,6 +90,7 @@
 				})
 			);
 		});
+		mapLoaded = true;
 	}
 
 	if (navigator.geolocation) {
@@ -107,4 +106,20 @@
 	}
 </script>
 
-<div bind:this={container} class="h-80 rounded-md" />
+<div
+	bind:this={container}
+	class="h-80 rounded-md my-2 flex items-center justify-center bg-gray-200">
+	<svg
+		width="100%"
+		height="100%"
+		viewBox="0 0 20 20"
+		class={mapLoaded ? 'hidden' : 'w-24 animate-spin'}
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg">
+		<path
+			fill-rule="evenodd"
+			clip-rule="evenodd"
+			d="M0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0V2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10H0Z"
+			fill="#374151" />
+	</svg>
+</div>
