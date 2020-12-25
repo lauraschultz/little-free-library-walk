@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ResultsMap from "./ResultsMap.svelte";
 	import { fly } from "svelte/transition";
-	import Footsteps from "./footsteps.svelte";
+	import Footsteps from "./Footsteps.svelte";
 	export let selectedPlace: google.maps.LatLngLiteral;
 	export let showConfig: boolean;
 	export let libraries: any[];
