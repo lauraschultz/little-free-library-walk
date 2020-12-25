@@ -658,21 +658,21 @@ var app = (function () {
     			? "rounded px-2 py-1 m-3 border border-gray-300 text-base"
     			: "hidden");
 
-    			add_location(input, file, 89, 0, 2867);
+    			add_location(input, file, 89, 0, 2909);
     			attr_dev(path, "fill-rule", "evenodd");
     			attr_dev(path, "clip-rule", "evenodd");
     			attr_dev(path, "d", "M0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0V2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10H0Z");
     			attr_dev(path, "fill", "#374151");
-    			add_location(path, file, 103, 2, 3262);
+    			add_location(path, file, 103, 2, 3304);
     			attr_dev(svg, "width", "100%");
     			attr_dev(svg, "height", "100%");
     			attr_dev(svg, "viewBox", "0 0 20 20");
     			attr_dev(svg, "class", svg_class_value = /*mapLoaded*/ ctx[2] ? "hidden" : "w-24 animate-spin");
     			attr_dev(svg, "fill", "none");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			add_location(svg, file, 96, 1, 3097);
+    			add_location(svg, file, 96, 1, 3139);
     			attr_dev(div, "class", "h-80 rounded-md my-2 flex items-center justify-center bg-gray-200");
-    			add_location(div, file, 93, 0, 2992);
+    			add_location(div, file, 93, 0, 3034);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1017,7 +1017,7 @@ var app = (function () {
     			div = element("div");
     			div.textContent = "Please choose a location on the map before continuing.";
     			attr_dev(div, "class", "text-red-800 p-2 text-sm italic");
-    			add_location(div, file$1, 65, 2, 1913);
+    			add_location(div, file$1, 65, 2, 1958);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1119,41 +1119,41 @@ var app = (function () {
     			t20 = space();
     			if (if_block1) if_block1.c();
     			attr_dev(span0, "class", "flex-initial border-4 border-fuchsia-800 text-fuchsia-800 font-black text-3xl leading-none px-3.5 py-2 rounded-full");
-    			add_location(span0, file$1, 19, 2, 532);
-    			attr_dev(h20, "class", "flex-1 font-bold text-2xl border-b border-gray-300 italic leading-none");
-    			add_location(h20, file$1, 21, 2, 676);
-    			attr_dev(div0, "class", "flex gap-4 items-center mb-4");
-    			add_location(div0, file$1, 18, 1, 487);
+    			add_location(span0, file$1, 19, 2, 573);
+    			attr_dev(h20, "class", "flex-1 font-bold text-2xl border-b border-gray-300 italic leading-none mx-4");
+    			add_location(h20, file$1, 21, 2, 717);
+    			attr_dev(div0, "class", "flex items-center mb-4");
+    			add_location(div0, file$1, 18, 1, 534);
     			attr_dev(p0, "class", "ml-2");
-    			add_location(p0, file$1, 26, 1, 815);
+    			add_location(p0, file$1, 26, 1, 861);
     			attr_dev(span1, "class", "flex-initial border-4 border-fuchsia-800 text-fuchsia-800 font-black text-3xl leading-none px-3.5 py-2 rounded-full");
-    			add_location(span1, file$1, 33, 2, 996);
-    			attr_dev(h21, "class", "flex-1 font-bold text-2xl border-b border-gray-300 italic leading-none");
-    			add_location(h21, file$1, 35, 2, 1140);
-    			attr_dev(div1, "class", "flex gap-4 items-center my-4");
-    			add_location(div1, file$1, 32, 1, 951);
+    			add_location(span1, file$1, 33, 2, 1036);
+    			attr_dev(h21, "class", "flex-1 font-bold text-2xl border-b border-gray-300 italic leading-none mx-4");
+    			add_location(h21, file$1, 35, 2, 1180);
+    			attr_dev(div1, "class", "flex items-center my-4");
+    			add_location(div1, file$1, 32, 1, 997);
     			attr_dev(p1, "class", "leading-tight");
-    			add_location(p1, file$1, 43, 3, 1344);
+    			add_location(p1, file$1, 43, 3, 1389);
     			attr_dev(p2, "class", "leading-tight");
-    			add_location(p2, file$1, 44, 3, 1390);
+    			add_location(p2, file$1, 44, 3, 1435);
     			attr_dev(div2, "class", "flex-initial");
-    			add_location(div2, file$1, 42, 2, 1314);
+    			add_location(div2, file$1, 42, 2, 1359);
     			attr_dev(input, "type", "range");
     			attr_dev(input, "min", "0");
     			attr_dev(input, "max", "5");
     			attr_dev(input, "step", ".25");
     			attr_dev(input, "class", "m-2 flex-1");
-    			add_location(input, file$1, 45, 8, 1468);
+    			add_location(input, file$1, 45, 8, 1513);
     			attr_dev(label, "class", "flex items-center ml-2");
-    			add_location(label, file$1, 41, 1, 1273);
+    			add_location(label, file$1, 41, 1, 1318);
 
     			attr_dev(button, "class", button_class_value = "px-2 py-1 w-full mt-4 text-gray-50 rounded " + (/*selectedPlace*/ ctx[0]
     			? "bg-indigo-800"
     			: "bg-gray-300 cursor-pointer"));
 
-    			add_location(button, file$1, 53, 1, 1584);
+    			add_location(button, file$1, 53, 1, 1629);
     			attr_dev(div3, "class", "max-w-2xl rounded-xl bg-gray-50 border border-gray-400 shadow-xl mx-2 sm:mx-10 md:mx-auto p-4 md:p-6 ");
-    			add_location(div3, file$1, 14, 0, 282);
+    			add_location(div3, file$1, 14, 0, 329);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1448,16 +1448,16 @@ var app = (function () {
     			attr_dev(path, "clip-rule", "evenodd");
     			attr_dev(path, "d", "M0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0V2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10H0Z");
     			attr_dev(path, "fill", "#374151");
-    			add_location(path, file$2, 108, 2, 2609);
+    			add_location(path, file$2, 108, 2, 2654);
     			attr_dev(svg, "width", "100%");
     			attr_dev(svg, "height", "100%");
     			attr_dev(svg, "viewBox", "0 0 20 20");
     			attr_dev(svg, "class", svg_class_value = /*mapLoaded*/ ctx[1] ? "hidden" : "w-24 animate-spin");
     			attr_dev(svg, "fill", "none");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			add_location(svg, file$2, 101, 1, 2444);
+    			add_location(svg, file$2, 101, 1, 2489);
     			attr_dev(div, "class", "h-80 rounded-md my-2 flex items-center justify-center bg-gray-200");
-    			add_location(div, file$2, 98, 0, 2339);
+    			add_location(div, file$2, 98, 0, 2384);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1892,7 +1892,7 @@ var app = (function () {
     			t1 = space();
     			create_component(footsteps.$$.fragment);
     			attr_dev(p, "class", "font-bold text-lg text-center");
-    			add_location(p, file$4, 105, 2, 3122);
+    			add_location(p, file$4, 105, 2, 3169);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2020,11 +2020,11 @@ var app = (function () {
     			p.textContent = "Nothing found for the address you selected.\n\t\t\t";
     			img = element("img");
     			attr_dev(p, "class", "font-bold text-lg text-center");
-    			add_location(p, file$4, 87, 3, 2483);
+    			add_location(p, file$4, 87, 3, 2530);
     			if (img.src !== (img_src_value = "assets/person_with_map.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "class", "max-w-md mx-auto my-4 w-full");
     			attr_dev(img, "alt", "woman holding a map");
-    			add_location(img, file$4, 99, 7, 2987);
+    			add_location(img, file$4, 99, 7, 3034);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2112,17 +2112,17 @@ var app = (function () {
     			p1 = element("p");
     			t6 = text(t6_value);
     			attr_dev(ul, "class", "inline-block w-1/4 sm:w-5/12 divide-y divide-gray-300 overflow-x-hidden bg-gray-200");
-    			add_location(ul, file$4, 59, 4, 1304);
+    			add_location(ul, file$4, 59, 4, 1351);
     			attr_dev(h3, "class", "text-lg leading-none my-1 pb-1 border-b border-gray-300");
-    			add_location(h3, file$4, 75, 5, 2055);
+    			add_location(h3, file$4, 75, 5, 2102);
     			attr_dev(p0, "class", "text-xs uppercase tracking-wide text-gray-600");
-    			add_location(p0, file$4, 78, 5, 2237);
+    			add_location(p0, file$4, 78, 5, 2284);
     			attr_dev(p1, "class", "leading-tight");
-    			add_location(p1, file$4, 81, 5, 2355);
+    			add_location(p1, file$4, 81, 5, 2402);
     			attr_dev(div0, "class", "inline-block w-3/4 sm:w-7/12 px-3 md:px-6 py-3");
-    			add_location(div0, file$4, 74, 4, 1989);
+    			add_location(div0, file$4, 74, 4, 2036);
     			attr_dev(div1, "class", "rounded border border-gray-200 flex mt-4");
-    			add_location(div1, file$4, 58, 3, 1245);
+    			add_location(div1, file$4, 58, 3, 1292);
     		},
     		m: function mount(target, anchor) {
     			mount_component(resultsmap, target, anchor);
@@ -2240,13 +2240,13 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(span, "class", "leading-none  w-4 inline-block text-center h-4 py-0.5 bg-red-500 text-gray-50 font-bold mr-1 text-xs rounded-full");
-    			add_location(span, file$4, 68, 7, 1742);
+    			add_location(span, file$4, 68, 7, 1789);
 
     			attr_dev(li, "class", li_class_value = "cursor-pointer leading-none pl-2 py-2 overflow-hidden overflow-ellipsis whitespace-nowrap text-sm " + (/*selectedLibrary*/ ctx[4] === /*i*/ ctx[11]
     			? "bg-gray-50 shadow rounded-l"
     			: "shadow-inner"));
 
-    			add_location(li, file$4, 62, 6, 1445);
+    			add_location(li, file$4, 62, 6, 1492);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -2328,22 +2328,22 @@ var app = (function () {
     			path = svg_element("path");
     			t1 = text("Go\n\t\tback");
     			attr_dev(div0, "class", "max-w-2xl rounded-xl bg-gray-50 border border-gray-400 shadow-xl mx-2 sm:mx-10 md:mx-auto p-4 md:p-6 ");
-    			add_location(div0, file$4, 48, 0, 868);
+    			add_location(div0, file$4, 48, 0, 915);
     			attr_dev(path, "stroke-linecap", "round");
     			attr_dev(path, "stroke-linejoin", "round");
     			attr_dev(path, "stroke-width", "2");
     			attr_dev(path, "d", "M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z");
-    			add_location(path, file$4, 118, 38, 3642);
+    			add_location(path, file$4, 118, 38, 3689);
     			attr_dev(svg, "class", "w-6 h-6 inline-block mr-2 group-hover:text-indigo-800");
     			attr_dev(svg, "fill", "none");
     			attr_dev(svg, "stroke", "currentColor");
     			attr_dev(svg, "viewBox", "0 0 24 24");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			add_location(svg, file$4, 113, 40, 3471);
+    			add_location(svg, file$4, 113, 40, 3518);
     			attr_dev(button, "class", "group");
-    			add_location(button, file$4, 113, 1, 3432);
+    			add_location(button, file$4, 113, 1, 3479);
     			attr_dev(div1, "class", "max-w-2xl rounded-xl bg-gray-50 border border-gray-400 shadow-xl mx-2 sm:mx-10 md:mx-auto px-4 md:px-6 py-2");
-    			add_location(div1, file$4, 109, 0, 3223);
+    			add_location(div1, file$4, 109, 0, 3270);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4292,31 +4292,31 @@ var app = (function () {
 				}
 			}).env.GOOGLE_API_KEY}&callback=initMap&libraries=places,directions`)) attr_dev(script, "src", script_src_value);
 
-    			add_location(script, file$5, 19, 1, 688);
+    			add_location(script, file$5, 19, 1, 726);
     			if (img.src !== (img_src_value = "assets/logo.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Little Free Library Walk");
     			attr_dev(img, "class", "w-48");
-    			add_location(img, file$5, 28, 2, 1143);
+    			add_location(img, file$5, 28, 2, 1181);
     			attr_dev(nav, "class", "max-w-2xl mx-2 sm:mx-10 md:mx-auto");
-    			add_location(nav, file$5, 27, 1, 1092);
+    			add_location(nav, file$5, 27, 1, 1130);
     			attr_dev(header, "class", "flex-initial pt-4 md:pt-8 pb-28 md:pb-32 bg-gradient-to-r from-indigo-900 to-fuchsia-900 text-gray-50");
-    			add_location(header, file$5, 25, 0, 971);
+    			add_location(header, file$5, 25, 0, 1009);
     			attr_dev(main, "class", "flex-1 -mt-24 space-y-2");
-    			add_location(main, file$5, 31, 0, 1235);
+    			add_location(main, file$5, 31, 0, 1273);
     			attr_dev(path, "d", "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z");
-    			add_location(path, file$5, 48, 38, 1839);
+    			add_location(path, file$5, 48, 38, 1877);
     			attr_dev(svg, "class", "w-4 h-4 inline-block mr-1 group-hover:text-yellow-300");
     			attr_dev(svg, "fill", "currentColor");
     			attr_dev(svg, "viewBox", "0 0 20 20");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
-    			add_location(svg, file$5, 44, 2, 1685);
+    			add_location(svg, file$5, 44, 2, 1723);
     			attr_dev(a, "class", "max-w-2xl mx-2 sm:mx-10 md:mx-auto py-4 block text-sm group");
     			attr_dev(a, "href", "https://github.com/lauraschultz/little-free-library-walk");
     			attr_dev(a, "target", "_blank");
     			attr_dev(a, "rel", "noreferer");
-    			add_location(a, file$5, 39, 1, 1507);
+    			add_location(a, file$5, 39, 1, 1545);
     			attr_dev(footer, "class", "flex-initial bg-gray-700 text-gray-50 mt-5");
-    			add_location(footer, file$5, 38, 0, 1446);
+    			add_location(footer, file$5, 38, 0, 1484);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

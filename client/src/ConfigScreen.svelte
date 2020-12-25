@@ -17,11 +17,11 @@
 	out:fly={{ x: -300, duration: 200 }}
 	in:fly={{ x: -300, duration: 200, delay: 200 }}
 	class="max-w-2xl rounded-xl bg-gray-50 border border-gray-400 shadow-xl mx-2 sm:mx-10 md:mx-auto p-4 md:p-6 ">
-	<div class="flex gap-4 items-center mb-4">
+	<div class="flex items-center mb-4">
 		<span
 			class="flex-initial border-4 border-fuchsia-800 text-fuchsia-800 font-black text-3xl leading-none px-3.5 py-2 rounded-full">1</span>
 		<h2
-			class="flex-1 font-bold text-2xl border-b border-gray-300 italic leading-none">
+			class="flex-1 font-bold text-2xl border-b border-gray-300 italic leading-none mx-4">
 			Choose your start and end point
 		</h2>
 	</div>
@@ -31,11 +31,11 @@
 		<MapBase bind:selectedPlace />
 	{/if}
 
-	<div class="flex gap-4 items-center my-4">
+	<div class="flex items-center my-4">
 		<span
 			class="flex-initial border-4 border-fuchsia-800 text-fuchsia-800 font-black text-3xl leading-none px-3.5 py-2 rounded-full">2</span>
 		<h2
-			class="flex-1 font-bold text-2xl border-b border-gray-300 italic leading-none">
+			class="flex-1 font-bold text-2xl border-b border-gray-300 italic leading-none mx-4">
 			Choose your route length
 		</h2>
 	</div>

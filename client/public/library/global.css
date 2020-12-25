@@ -797,6 +797,11 @@ body {
   margin-bottom: 1rem;
 }
 
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1036,10 +1041,6 @@ body {
 
 .w-full{
   width: 100%;
-}
-
-.gap-4{
-  gap: 1rem;
 }
 
 @-webkit-keyframes spin{
