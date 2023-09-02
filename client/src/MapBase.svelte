@@ -17,7 +17,6 @@
 		});
 		const searchBox = new google.maps.places.SearchBox(searchInput);
 		map.controls[google.maps.ControlPosition.TOP_LEFT].push(searchInput);
-		console.log("here");
 		mapLoaded = true;
 		map.addListener("bounds_changed", () => {
 			searchBox.setBounds(map.getBounds());
@@ -82,24 +81,33 @@
 		});
 	}
 
+	const initGeoloc = (position: GeolocationPosition) => {
+		console.log(`position found: ${JSON.stringify(position)}`);
+		let coords = position.coords;
+		center = { lat: coords.latitude, lng: coords.longitude };
+		zoom = 15;
+	};
+
+	const initWithoutGeoloc = () => {
+		console.warn("Geolocation API not available");
+		center = { lat: 40.812579, lng: -95.726705 };
+		zoom = 3;
+	};
+
 	if (navigator.geolocation) {
-		console.log("geoloc.");
-		navigator.geolocation.getCurrentPosition((position) => {
-			console.log(`position found: ${JSON.stringify(position)}`);
-			let coords = position.coords;
-			center = { lat: coords.latitude, lng: coords.longitude };
-			zoom = 15;
+		navigator.geolocation.getCurrentPosition(initGeoloc, initWithoutGeoloc, {
+			timeout: 2000,
 		});
 	} else {
-		console.log("no geoloc.");
-		center = { lat: 27.805352, lng: -33.194958 };
-		zoom = 1;
+		initWithoutGeoloc();
 	}
 </script>
 
 <input
 	bind:this={searchInput}
-	class={mapLoaded ? 'rounded px-2 py-1 m-3 border border-gray-300 text-base' : 'hidden'} />
+	class={mapLoaded
+		? "rounded px-2 py-1 m-3 border border-gray-300 text-base"
+		: "hidden"} />
 
 <div
 	bind:this={container}
@@ -108,7 +116,7 @@
 		width="100%"
 		height="100%"
 		viewBox="0 0 20 20"
-		class={mapLoaded ? 'hidden' : 'w-24 animate-spin'}
+		class={mapLoaded ? "hidden" : "w-24 animate-spin"}
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg">
 		<path

@@ -7,7 +7,6 @@ export const getPath = (
 	return axios
 		.get(`${process.env.SERVER}/path/${origin.lat}/${origin.lng}/${distance}`)
 		.then((response) => {
-			console.log(`received from server: ${JSON.stringify(response.data)}`);
 			return response.data;
 		});
 };

@@ -32,7 +32,6 @@
 	];
 
 	$: {
-		console.log(`selected library: ${JSON.stringify(selectedLibrary)}`);
 		if (selectedLibrary) {
 			map.setZoom(14);
 			setTimeout(() => {
@@ -46,7 +45,6 @@
 	}
 
 	$: if (zoom) {
-		console.log(waypoints);
 		map = new google.maps.Map(container, {
 			zoom,
 			center,
@@ -93,16 +91,25 @@
 		mapLoaded = true;
 	}
 
+	const initGeoloc = (position: GeolocationPosition) => {
+		console.log(`position found: ${JSON.stringify(position)}`);
+		let coords = position.coords;
+		center = { lat: coords.latitude, lng: coords.longitude };
+		zoom = 15;
+	};
+
+	const initWithoutGeoloc = () => {
+		console.warn("Geolocation API not available");
+		center = { lat: 40.812579, lng: -95.726705 };
+		zoom = 3;
+	};
+
 	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition((position) => {
-			let coords = position.coords;
-			center = { lat: coords.latitude, lng: coords.longitude };
-			zoom = 15;
+		navigator.geolocation.getCurrentPosition(initGeoloc, initWithoutGeoloc, {
+			timeout: 2000,
 		});
 	} else {
-		console.log("no geoloc.");
-		center = { lat: 27.805352, lng: -33.194958 };
-		zoom = 1;
+		initWithoutGeoloc();
 	}
 </script>
 
@@ -113,7 +120,7 @@
 		width="100%"
 		height="100%"
 		viewBox="0 0 20 20"
-		class={mapLoaded ? 'hidden' : 'w-24 animate-spin'}
+		class={mapLoaded ? "hidden" : "w-24 animate-spin"}
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg">
 		<path
