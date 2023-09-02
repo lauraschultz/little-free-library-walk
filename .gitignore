@@ -1,0 +1,8 @@
+.DS_Store
+client/node_modules
+client/.vs_code
+client/.env
+server/node_modules
+server/src/dump.rdb
+server/.env
+server/Procfile
